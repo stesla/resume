@@ -1,78 +1,36 @@
-% (c) 2003-2007 Samuel Tesla <samuel@thoughtlocker.net> http://www.alieniloquent.com/
-%
+% (c) 2003-2007 Samuel Tesla <samuel@thoughtlocker.net>
+% http://www.alieniloquent.com/
 
-\documentclass[letterpaper,11pt]{article}
-\usepackage{tabularx}
+\documentclass{resume}
 
-% Margins
-\setlength{\voffset}{0in}
-\setlength{\paperwidth}{8.5in}
-\setlength{\paperheight}{11in}
-\setlength{\headheight}{0in}
-\setlength{\headsep}{0in}
-\setlength{\textheight}{11in}
-\setlength{\textheight}{9.5in}
-\setlength{\topmargin}{-0.25in}
-\setlength{\textwidth}{7in}
-\setlength{\topskip}{0in}
-\setlength{\oddsidemargin}{-0.25in}
-\setlength{\evensidemargin}{-0.25in}
+\name{Samuel Tesla}
+\address{5844 Corby Street, Omaha, NE 68104}
+\phone{+1 (402) 933-5654 (GMT -6)}
+\email{samuel@thoughtlocker.net}
 
-% Other settings
-\pagestyle{empty}
-\raggedbottom
-\raggedright
-\setlength{\tabcolsep}{0in}
-\setlength\arrayrulewidth{0.8pt}
-\newcolumntype{L}{>{\small\raggedright\arraybackslash}X}
-\newcolumntype{C}{>{\small\centering\arraybackslash}X}
-\newcolumntype{R}{>{\small\raggedleft\arraybackslash}X}
+% Use San-Serif fonts for everything
 \renewcommand{\rmdefault}{\sfdefault}
 
-% Commands
-\newcommand{\resumesection}[1]{
-  \setlength\extrarowheight{4pt}
-  \begin{tabularx}{\linewidth}[h]{L}
-    \hline\textbf{\Large #1}\\\hline
-\end{tabularx}}
-
-\newcommand{\resumeitemheading}[4]{
-  \item
-  \begin{tabular*}{6.5in}{l@{\extracolsep{\fill}}r}
-    \textbf{#1} & #2 \\
-    \textit{#3} & \textit{#4} \\
-\end{tabular*}}
-
-\newcommand{\employerheading}[4]{\resumeitemheading{#1}{#2}{#3}{#4}\vspace{-6pt}}
-\newcommand{\responsibility}[1]{\item #1 \vspace{-2pt}}
-
-\newcommand{\resumeheader}[4]{
-  \raggedleft{\Huge #1}\\
-  \begin{tabularx}{\linewidth}[h]{LCR}
-    \hline #2 & #3 & #4 \\\hline
-\end{tabularx}\vspace{0.1in}}
-
 \begin{document}
-\resumeheader{Samuel Tesla}
-             {5844 Corby Street, Omaha, NE 68104}
-             {+1 (402) 933-5654}
-             {samuel@thoughtlocker.net}
 
-
-\resumesection{Education}
+\section{Education}
 \begin{itemize}
-  \resumeitemheading{AIMS Community College}{Greeley, CO}
-                {AA, Computer Science}{June 1999}
-  \resumeitemheading{University of Nebraska at Omaha}{Omaha, NE}
-                {BS, Computer Science}{Expected graduation in Spring of 2009}
+  \resumeitem{AIMS Community College}
+             {Greeley, CO}
+             {AA, Computer Science}
+             {June 1999}
+  \resumeitem{University of Nebraska at Omaha}
+             {Omaha, NE}
+             {BS, Computer Science}
+             {Expected graduation in Spring of 2009}
 \end{itemize}
 
-\resumesection{Work Experience}
+\section{Work Experience}
 \begin{itemize}
-
-
-  \employerheading{Profitstar, Inc.}{Omaha, NE}
-  {Software Engineer }{2004 - Present}
+  \employer{Profitstar, Inc.}
+           {Omaha, NE}
+           {Software Engineer }
+           {2004 - Present}
   \begin{itemize}
     \responsibility{Design and develop software in C\# and Delphi.}
     \responsibility{Implement agile practices such as pair programming and test-first design.}
@@ -82,64 +40,18 @@
       Postfix, and Samba.}
   \end{itemize}
 
-%%   \employerheading{PayPal, Inc.}{Omaha, NE}
-%%   {Resolution Services Agent}{Nov. 2003 - March 2004}
-%%   \begin{itemize}
-%%     \responsibility{Respond to customer inquiries via the telephone and email
-%%       regarding limited account access, protection services, chargebacks, and
-%%       reversal of funds.}
-%%     \responsibility{Evaluate cases and route work to the appropriate departments.}
-%%     \responsibility{Review documentation and make decisions regarding account
-%%       limitations.}
-%%     \responsibility{Assist in the mentoring and training of new representatives.}
-%%   \end{itemize}
-
-  \employerheading{Thoughtlocker.net}{Omaha, NE}
-  {System Administrator}{2002 - Present}
+  \employer{Thoughtlocker.net}
+           {Omaha, NE}
+           {System Administrator}
+           {2002 - Present}
   \begin{itemize}
     \responsibility{Administer various end-user services on Linux such as: Apache,
       Subversion, and PostgreSQL.}
     \responsibility{Implement virtual hosting for a large number of domains.}
   \end{itemize}
-
-%%   \employerheading{West Interactive Corp.}{Omaha, NE}
-%%   {Performance Assessment Coordinator}{March 2002 - Nov. 2003}
-%%   \begin{itemize}
-%%     \responsibility{Perform historical and real-time evaluation of calls to
-%%       ensure quality.}
-%%     \responsibility{Manage the quality and metrics of a team of
-%%       representatives.}
-%%     \responsibility{Organize and conduct new-hire classes and post-hire
-%%       training initiatives.}
-%%     \responsibility{Contribute to the on-going development of training
-%%       materials.}
-%%     \responsibility{Assissted customers in the configuration and
-%%       troubleshooting of dial-up internet connections and related
-%%       issues.}
-%%   \end{itemize}
-
-%%  \employerheading{Sykes Enterprises Inc.}{Greeley, CO}
-%%  {Customer Support Technician}{Oct. 2001 - Dec. 2001}
-%%  \begin{itemize}
-%%    \responsibility{Assissted customers in the configuration and
-%%      troubleshooting of dial-up internet connections and related
-%%      issues.}
-%%  \end{itemize}
-
-%%   \employerheading{Experian Exactis}{Denver, CO}
-%%   {Junior Software Development Engineer}{Sept. 2000 - Aug. 2001}
-%%   \begin{itemize}
-%%     \responsibility{Designed and implemented CRM tool in Java.}
-%%     \responsibility{Designed and implemented user management tool in Java.}
-%%     \responsibility{Designed and implemented a log rolling tool in Perl and
-%%       C.}
-%%     \responsibility{Designed and implemented a version verification tool in
-%%       Perl.}
-%%   \end{itemize}
-
 \end{itemize}
 
-\resumesection{Skills}
+\section{Skills}
 
 \begin{description}
 \item[Languages:] C, C++, C\#, Objective C, Ruby, Smalltalk, Common Lisp,
@@ -150,39 +62,18 @@
   95/98/NT/2000/XP, Mac OS X 10.3 and 10.4
 \end{description}
 
-\resumesection{Open Source Projects}
+\section{Open Source Projects}
 \begin{itemize}
-  \resumeitemheading{Koan}
-  {http://svn.arete.cc/koan}
-  {Co-author}{2004 - Present}
-  A Cocoa telnet client for use with multi-user, text-based games.
+  \resumeitem{Koan}
+             {http://svn.arete.cc/koan}
+             {Co-author}{2004 - Present}
+             A Cocoa telnet client for use with multi-user, text-based games.
 
-  \resumeitemheading{OCFit}
-  {http://ocfit.tigris.org}
-  {Author}{September 2005 - Present}
-  A tool for writing acceptance tests in Objective C on Mac OS X.
-
-%%   \resumeitemheading{RERSS}
-%%   {http://rerss.alieniloquent.com}
-%%   {Maintainer}{December 2002 - Present}
-%%   A library for parsing RSS documents written in Ruby.
-
-%%   \resumeitemheading{CGI::Session::MySQL}
-%%   {http://raa.ruby-lang.org/list.rhtml?name=mysqlsession}
-%%   {Maintainer}{July 2003 - Present}
-%%   A backend module for the Ruby CGI::Session class.  It stores session data
-%%   in a MySQL database.
-
-%%   \resumeitemheading{ruby-pam}
-%%   {http://ruby-pam.sourceforge.net/ruby-pam.html}
-%%   {Patch Contributor}{July 2003}
-%%   Fixed Ruby extension C code to use new Ruby 1.8.0 syntax.
-
-%%   \resumeitemheading{Clive}
-%%   {http://sourceforge.net/projects/ljclive}
-%%   {Author}{July 2001 - July 2003}
-%%   UNIX command-line client for LiveJournal
-%%   (http://www.livejournal.com) written in POSIX C.  It connects via
-%%   HTTP and uses a very simple protocol to post to weblogs.
+  \resumeitem{OCFit}
+             {http://ocfit.tigris.org}
+             {Author}
+             {September 2005 - Present}
+             A tool for writing acceptance tests in Objective C on Mac OS X.
 \end{itemize}
+
 \end{document}
