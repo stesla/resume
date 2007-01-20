@@ -53,7 +53,7 @@
 \newcommand{\@email}{}
 \newcommand{\email}[1]{\renewcommand{\@email}{#1}}
 \newcommand{\resumeheader}{
-  \raggedleft{\Huge \@name}\\
+  \raggedleft{\textbf{\Huge \@name}}\\
   \begin{tabularx}{\linewidth}[h]{LCR}
     \hline \@address & \@phone & \@email \\\hline
 \end{tabularx}\vspace{0.1in}}
