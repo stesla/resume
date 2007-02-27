@@ -30,6 +30,7 @@
 
 \renewcommand{\section}[1]{
   \setlength\extrarowheight{4pt}
+  \bigskip
   \begin{tabularx}{\linewidth}[h]{L}
     \hline\textbf{\Large #1}\\\hline
 \end{tabularx}}
