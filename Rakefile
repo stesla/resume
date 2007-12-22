@@ -1,3 +1,4 @@
+require "net/ssh"
 require "rake/clean"
 
 CLEAN.include "*.aux", "*.blg", "*.bbl", "*.dvi", "*.log", "*.ps"
@@ -18,4 +19,8 @@ end
 
 rule '.pdf' => ['.ps'] do |task|
   sh %{ps2pdf #{task.source}}
+end
+
+task :deploy => "resume.pdf" do
+  sh "scp resume.pdf samuel@xia.thoughtlocker.net:~/www/www.alieniloquent.com/htdocs/"
 end
