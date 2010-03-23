@@ -4,6 +4,7 @@
 \ProvidesClass{resume}
 
 \RequirePackage{tabularx}
+\RequirePackage{url}
 
 \LoadClass[11pt,letterpaper]{article}
 
@@ -35,6 +36,13 @@
     \hline\textbf{\Large #1}\\\hline
 \end{tabularx}}
 
+\newcommand{\opensource}[2]{ % name, url
+  \item
+    \begin{tabular*}{6.5in}{l@{\extracolsep{\fill}}r}
+      \textbf{#1} \\
+    \end{tabular*}
+    \url{#2} \\}
+
 \newcommand{\resumeitem}[4]{
   \item
   \begin{tabular*}{6.5in}{l@{\extracolsep{\fill}}r}
@@ -44,12 +52,20 @@
     \textit{#3} & \textit{#4} \\
 \end{tabular*}}
 
-\newcommand{\opensource}[2]{ % name, url
+\newcommand{\publication}[4]{ % name, venue, URL, date
   \item
-    \begin{tabular*}{6.5in}{l@{\extracolsep{\fill}}r}
-      \textbf{#1} \\
-    \end{tabular*}
-    \texttt{#2} \\}
+  \begin{tabular*}{6.5in}{l@{\extracolsep{\fill}}r}
+    \textbf{#1} & #2 \\
+  \end{tabular*}
+  \begin{tabular*}{6.5in}{l@{\extracolsep{\fill}}r}
+    \url{#3} & \textit{#4} \\
+  \end{tabular*}}
+
+\newcommand{\article}[4]{\publication{#1}{#2}{#3}{#4}}
+\newcommand{\talk}[4]{\publication{#1}{#2}{#3}{#4}}
+
+
+\newcommand{\education}[4]{\resumeitem{#1}{#2}{#3}{#4}}
 
 \newcommand{\employer}[4]{\resumeitem{#1}{#2}{#3}{#4}\vspace{-6pt}}
 \newcommand{\responsibility}[1]{\item #1 \vspace{-2pt}}
