@@ -1,4 +1,4 @@
-% (c) 2003-2007 Samuel Tesla <samuel@thoughtlocker.net>
+% (c) 2003-2010 Samuel Tesla <samuel.tesla@gmail.com>
 % http://www.alieniloquent.com/
 
 \ProvidesClass{resume}
@@ -39,8 +39,17 @@
   \item
   \begin{tabular*}{6.5in}{l@{\extracolsep{\fill}}r}
     \textbf{#1} & #2 \\
+  \end{tabular*}
+  \begin{tabular*}{6.5in}{l@{\extracolsep{\fill}}r}
     \textit{#3} & \textit{#4} \\
 \end{tabular*}}
+
+\newcommand{\opensource}[2]{ % name, url
+  \item
+    \begin{tabular*}{6.5in}{l@{\extracolsep{\fill}}r}
+      \textbf{#1} \\
+    \end{tabular*}
+    \texttt{#2} \\}
 
 \newcommand{\employer}[4]{\resumeitem{#1}{#2}{#3}{#4}\vspace{-6pt}}
 \newcommand{\responsibility}[1]{\item #1 \vspace{-2pt}}

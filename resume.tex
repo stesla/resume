@@ -1,4 +1,4 @@
-% (c) 2003-2007 Samuel Tesla <samuel@thoughtlocker.net>
+% (c) 2003-2010 Samuel Tesla <samuel.tesla@gmail.com>
 % http://www.alieniloquent.com/
 
 \documentclass{resume}
@@ -6,7 +6,7 @@
 \name{Samuel Tesla}
 \address{5844 Corby Street, Omaha, NE 68104}
 \phone{+1 (402) 319-6685 (GMT -6)}
-\email{samuel@thoughtlocker.net}
+\email{samuel.tesla@gmail.com}
 
 % Use San-Serif fonts for everything
 \renewcommand{\familydefault}{cmss}
@@ -15,78 +15,85 @@
 
 \section{Education}
 \begin{itemize}
+  \resumeitem{University of Nebraska at Omaha}
+             {Omaha, NE}
+             {BS, Computer Science \& Mathematics}
+             {May 2009}
   \resumeitem{AIMS Community College}
              {Greeley, CO}
              {AA, Computer Science}
              {June 1999}
-  \resumeitem{University of Nebraska at Omaha}
-             {Omaha, NE}
-             {BS, Computer Science}
-             {Senior, expected graduation in Fall of 2008}
 \end{itemize}
 
-\section{Skills}
+\section{Languages}
 \begin{description}
-\item[Languages:] bash, C, C\#, C++, CSS, Common Lisp, Emacs Lisp, Erlang,
-  Delphi, HTML, JavaScript, \LaTeX, Scheme, SML, Objective C, OCaml, PHP, Perl,
-  Python, Ruby, Smalltalk, XML
-\item[Frameworks:] CLOS, Cocoa, Erlang/OTP, .NET, Rails, STL, VCL
-\item[Protocols:] DNS, HTTP, SOCKS v5, SMTP, TCP/IP, Telnet
-\item[Applications:] Apache, Apple iWork, BIND, Dovecot, Emacs, Microsoft Office, MySQL,
-  PostgreSQL, Portage, Postfix, RPM, Subversion, Trac, vi, Visual Studio
-\item[Operating Systems:] Red Hat Linux, Gentoo Linux, FreeBSD, Windows
-  95/98/NT/2000/XP, Mac OS X 10.3 thru 10.5
+\item[Fluent:] C, Ruby
+\item[Professional:] bash, C++, C\#, Delphi, Emacs Lisp, Erlang, Java, \LaTeX, Perl, Smalltalk
+\item[Open Source:] Go, Objective C, OCaml
+\item[Hobby:] Common Lisp, Haskell, Scheme, SML, Python
 \end{description}
 
 \section{Open Source Projects}
 \begin{itemize}
-  \resumeitem{base32}
-             {http://rubyforge.org/projects/base32}
-             {Author}
-             {2007 - Present}
+  \opensource{gospecify}
+             {http://github.com/stesla/gospecify}
+             An rSpec-style BDD framework written for the Go language (\texttt{http://golang.org})
+
+  \opensource{base32}
+             {http://github.com/stesla/base32}
              An implementation of RFC3548 Base32 encoding in C with Ruby
              bindings.
 
-  \resumeitem{Clive}
-             {http://sourceforge.net/projects/ljclive}
-             {Author}
-             {2001 - 2003}
-             A command-line HTTP client for using the LiveJournal
-             (http://www.livejournal.com) blogging service.
+  \opensource{Lambda}
+             {http://github.com/stesla/lambda}
+             An implementation of lambda calculus in OCaml.
 
-  \resumeitem{Koan}
-             {http://3james.com/koan}
-             {Co-author}{2004 - Present}
+  \opensource{ocamlobjs}
+             {http://github.com/stesla/ocamlobjs}
+             A tool for determining link order in OCaml projects.
+
+  \opensource{Koan}
+             {http://github.com/stesla/koan}
              A Cocoa telnet client for use with multi-user, text-based
              games. It includes RFC-compliant implementations of Telnet and
              SOCKS v5.
-
-  \resumeitem{Lambda}
-             {http://www.alieniloquent.com/code/lambda/}
-             {Author}{2007 - Present}
-             An implementation of lambda calculus in OCaml.
-
-  \resumeitem{OCFit}
-             {http://ocfit.tigris.org}
-             {Author}
-             {2005 - Present}
-             A tool for writing acceptance tests in Objective C on Mac OS X.
 \end{itemize}
 
 \pagebreak
 
 \section{Work Experience}
 \begin{itemize}
+  \employer{Engine Yard, Inc.}
+           {San Francisco, CA}
+           {Developer Lead}
+           {June 2008 - March 2010}
+  \begin{itemize}
+    \responsibility{Lead developer on the open-source Vertebra project for cloud automation using Ruby and Erlang.}
+    \responsibility{Lead developer on a project to migrate Engine Yard's applications to a vendor-agnostic platform.}
+    \responsibility{Participated in the design and development of Engine Yard's Cloud product.}
+    \responsibility{Helped mentor junior members of the team.}
+  \end{itemize}
+
+  \employer{Sojern, Inc.}
+           {Omaha, NE}
+           {Senior Software Engineer}
+           {March 2008 - June 2008}
+  \begin{itemize}
+    \responsibility{Used Ruby on Rails to develop both internal and external applications.}
+    \responsibility{Designed and implemented a domain-specific data storage service and interchange format.}
+    \responsibility{Implemented Ruby bindings for the expat XML parser.}
+  \end{itemize}
+
   \employer{Planet Group, Inc.}
            {Omaha, NE}
            {Consultant}
-           {December 2007 - Present}
+           {December 2007 - March 2008}
   \begin{itemize}
-    \responsibility{Work with Sojern, Inc.}
-    \responsibility{Use Ruby on Rails to develop both internal and external
+    \responsibility{Worked with Sojern, Inc.}
+    \responsibility{Used Ruby on Rails to develop both internal and external
       applications.}
-    \responsibility{Manipulate data in XML feeds and MySQL databases.}
-    \responsibility{Design and implement a custom reporting tool.}
+    \responsibility{Automated santization of data feeds from third-party vendors.}
+    \responsibility{Designed and implemented a custom reporting tool.}
   \end{itemize}
 
   \employer{Jack Henry \& Associates, Inc.}
@@ -94,22 +101,12 @@
            {Software Engineer}
            {March 2004 - December 2007}
   \begin{itemize}
-    \responsibility{Design and develop software in C\# and Delphi.}
-    \responsibility{Implement agile practices such as pair programming and test-first design.}
+    \responsibility{Designed and developed software in C\# and Delphi.}
+    \responsibility{Implemented agile practices such as pair programming and test-first design.}
     \responsibility{Migrated version control from Microsoft Visual Source Safe to Subversion.}
-    \responsibility{Implement automated, continuous build using Ant and Rake.}
-    \responsibility{Administer department Linux and Windows servers housing Subversion, Apache,
+    \responsibility{Implemented automated, continuous build using Ant and Rake.}
+    \responsibility{Administered department Linux and Windows servers housing Subversion, Apache,
       Postfix, and Samba.}
-  \end{itemize}
-
-  \employer{Thoughtlocker.net}
-           {Omaha, NE}
-           {System Administrator}
-           {2002 - Present}
-  \begin{itemize}
-    \responsibility{Administer various end-user services on Linux such as: Apache,
-      Subversion, and PostgreSQL.}
-    \responsibility{Implement virtual hosting for a large number of domains.}
   \end{itemize}
 
   \employer{Experian Exactis}
